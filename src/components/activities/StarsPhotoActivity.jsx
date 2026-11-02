@@ -21,20 +21,15 @@ import {
 
 export default function StarsPhotoActivity() {
   const { data, updateActivity } = usePortfolio();
-
-  const activity = data?.activities?.starsPhoto || {};
-  const meta = data?.meta || {};
+  const activity = data.activities.starsPhoto || {};
 
   const [isEditingReflection, setIsEditingReflection] = useState(false);
   const [tempReflection, setTempReflection] = useState(
     activity.reflection || ''
   );
 
-  const uploadedPhotoCount = [
-    activity.cat1Image,
-    activity.userUploadedImage,
-    activity.cat2Image
-  ].filter(Boolean).length;
+  // Three recognition photographs are displayed in this section.
+  const uploadedPhotoCount = 3;
 
   const learningImpact = [
     {
@@ -131,7 +126,7 @@ export default function StarsPhotoActivity() {
             </span>
 
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-navy-950">
-              {activity.title || 'Stars Photo — My Achievements'}
+              {activity.title || 'Stars Photo'}
             </h2>
           </div>
         </div>
@@ -139,11 +134,11 @@ export default function StarsPhotoActivity() {
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-900 border border-amber-200">
             <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-            {activity.badge || 'Recognition Award'}
+            {activity.badge || '9 Stars Earned'}
           </span>
 
           <span className="text-xs text-navy-500 font-mono bg-ivory-100 px-3 py-1 rounded-full border border-ivory-200">
-            {activity.date || 'Course Recognition'}
+            {activity.date || '2026'}
           </span>
         </div>
       </div>
@@ -155,13 +150,13 @@ export default function StarsPhotoActivity() {
         </p>
 
         <p className="text-sm sm:text-base text-navy-700 leading-7">
-          These nine stars represent the appreciation and recognition I
-          received throughout my Advanced Python Programming course.
-          Seven stars were awarded for assignments and classroom activities,
-          one for lab consistency and one for CAT-2 examination performance.
-          Each recognition encouraged me to take greater interest in Python,
-          participate more actively, practise consistently and improve my
-          understanding of the subject.
+          These stars represent the appreciation and recognition I received
+          throughout my Advanced Python Programming course. For me, they
+          became more than just rewards. Each recognition encouraged me to
+          take greater interest in the subject, participate more actively,
+          practise consistently and improve my understanding of Python.
+          They remind me that even a small achievement can create the
+          motivation to learn something better every day.
         </p>
       </section>
 
@@ -191,10 +186,10 @@ export default function StarsPhotoActivity() {
               </span>
             </div>
             <p className="text-2xl font-mono font-bold text-navy-950">
-              {uploadedPhotoCount} / 3
+              {uploadedPhotoCount}
             </p>
             <p className="text-xs text-navy-600 mt-1">
-              Recognition photographs currently uploaded.
+              Three recognition photographs displayed.
             </p>
           </div>
 
@@ -225,9 +220,8 @@ export default function StarsPhotoActivity() {
                 My Star Achievements
               </h3>
             </div>
-
             <p className="text-sm text-navy-600 mt-2">
-              Photographic evidence of the recognition received during the course.
+              Photographic evidence of the recognition I received during the course.
             </p>
           </div>
 
@@ -239,8 +233,8 @@ export default function StarsPhotoActivity() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <MediaUploadSlot
             activityKey="starsPhoto"
-            fieldKey="cat1Image"
-            currentImage={activity.cat1Image}
+            fieldKey="userUploadedImage"
+            currentImage={activity.userUploadedImage}
             defaultImage={null}
             aspectRatio="aspect-[4/3]"
             title="Recognition Photo 1"
@@ -250,8 +244,8 @@ export default function StarsPhotoActivity() {
 
           <MediaUploadSlot
             activityKey="starsPhoto"
-            fieldKey="userUploadedImage"
-            currentImage={activity.userUploadedImage}
+            fieldKey="cat1Image"
+            currentImage={activity.cat1Image}
             defaultImage={null}
             aspectRatio="aspect-[4/3]"
             title="Recognition Photo 2"
@@ -277,53 +271,6 @@ export default function StarsPhotoActivity() {
         </p>
       </section>
 
-      {/* Star Distribution */}
-      <section className="mb-10">
-        <div className="mb-5">
-          <p className="text-xs font-mono uppercase tracking-widest text-violetAccent-700 font-bold mb-2">
-            Recognition Breakdown
-          </p>
-          <h3 className="text-xl font-serif font-bold text-navy-900">
-            How I Earned My 9 Stars
-          </h3>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-5 rounded-xl bg-ivory-50 border border-ivory-200">
-            <div className="flex items-center gap-2 mb-3">
-              <BookOpen className="w-5 h-5 text-violetAccent-600" />
-              <span className="text-xs font-mono uppercase tracking-wider text-navy-600">
-                Assignments & Classroom
-              </span>
-            </div>
-            <p className="text-3xl font-mono font-bold text-navy-950">7</p>
-            <p className="text-sm text-navy-700 mt-1">Stars earned</p>
-          </div>
-
-          <div className="p-5 rounded-xl bg-ivory-50 border border-ivory-200">
-            <div className="flex items-center gap-2 mb-3">
-              <CheckCircle2 className="w-5 h-5 text-emerald-700" />
-              <span className="text-xs font-mono uppercase tracking-wider text-navy-600">
-                Lab Consistency
-              </span>
-            </div>
-            <p className="text-3xl font-mono font-bold text-navy-950">1</p>
-            <p className="text-sm text-navy-700 mt-1">Star earned</p>
-          </div>
-
-          <div className="p-5 rounded-xl bg-ivory-50 border border-ivory-200">
-            <div className="flex items-center gap-2 mb-3">
-              <GraduationCap className="w-5 h-5 text-amber-500" />
-              <span className="text-xs font-mono uppercase tracking-wider text-navy-600">
-                CAT-2 Examination
-              </span>
-            </div>
-            <p className="text-3xl font-mono font-bold text-navy-950">1</p>
-            <p className="text-sm text-navy-700 mt-1">Star earned</p>
-          </div>
-        </div>
-      </section>
-
       {/* Reasons for Recognition */}
       <section className="mb-10">
         <div className="mb-5">
@@ -343,7 +290,7 @@ export default function StarsPhotoActivity() {
             <div className="flex items-center gap-2 mb-2">
               <BookOpen className="w-4 h-4 text-amber-500" />
               <h4 className="font-semibold text-navy-900 text-sm">
-                Assignments — 7 Stars
+                Assignments
               </h4>
             </div>
             <p className="text-sm text-navy-700 leading-relaxed">
@@ -363,8 +310,7 @@ export default function StarsPhotoActivity() {
             <p className="text-sm text-navy-700 leading-relaxed">
               Taking part in classroom activities and responding to questions
               encouraged me to become more attentive and actively involved
-              in the learning process. These activities are included in the
-              seven-star recognition category above.
+              in the learning process.
             </p>
           </div>
 
@@ -372,7 +318,7 @@ export default function StarsPhotoActivity() {
             <div className="flex items-center gap-2 mb-2">
               <Target className="w-4 h-4 text-amber-500" />
               <h4 className="font-semibold text-navy-900 text-sm">
-                CAT-2 Examination — 1 Star
+                CAT-2 Examination
               </h4>
             </div>
             <p className="text-sm text-navy-700 leading-relaxed">
@@ -386,13 +332,13 @@ export default function StarsPhotoActivity() {
             <div className="flex items-center gap-2 mb-2">
               <CheckCircle2 className="w-4 h-4 text-amber-500" />
               <h4 className="font-semibold text-navy-900 text-sm">
-                Lab Consistency — 1 Star
+                Lab Consistency
               </h4>
             </div>
             <p className="text-sm text-navy-700 leading-relaxed">
-              Maintaining consistency in lab sessions and participating
-              regularly helped me develop a disciplined approach towards
-              practical learning.
+              Staying consistent with lab activities and making an effort
+              to participate helped me develop a disciplined approach
+              to learning.
             </p>
           </div>
         </div>
@@ -550,10 +496,10 @@ export default function StarsPhotoActivity() {
 
         <div className="mt-5 pt-4 border-t border-navy-100/60 flex flex-wrap items-center justify-between gap-2 text-xs text-navy-600">
           <span className="font-semibold text-navy-900">
-            {meta.studentName || ''}
+            {data.meta.studentName}
           </span>
           <span className="font-mono">
-            {meta.courseCode || ''}
+            {data.meta.courseCode}
           </span>
         </div>
       </section>
@@ -569,7 +515,7 @@ export default function StarsPhotoActivity() {
         </p>
       </div>
 
-      {/* Participants and Tags */}
+      {/* Existing Participants and Tags */}
       <div className="mt-8 p-4 rounded-xl bg-ivory-50 border border-ivory-200 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2 text-xs">
           <Users className="w-4 h-4 text-violetAccent-600" />
