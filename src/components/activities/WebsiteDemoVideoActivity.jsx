@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Video,
   Play,
-  Download,
   ExternalLink,
   CheckCircle2,
   Github
@@ -14,8 +13,11 @@ export default function WebsiteDemoVideoActivity() {
   const { data } = usePortfolio();
   const activity = data?.activities?.websiteDemoVideo || {};
 
-  const videoUrl = '/uploads/23MID0233_23MID0061_VIDEO.mp4';
-  const videoName = '23MID0233_23MID0061_VIDEO.mp4';
+  const driveVideoUrl =
+    'https://drive.google.com/file/d/1jYtAKhLCZGyRx0dn8DSblQr21KWNnq5E/preview';
+
+  const driveViewUrl =
+    'https://drive.google.com/file/d/1jYtAKhLCZGyRx0dn8DSblQr21KWNnq5E/view?usp=sharing';
 
   const repoLinks = activity.repoLinks || [
     {
@@ -61,7 +63,8 @@ export default function WebsiteDemoVideoActivity() {
             </h2>
 
             <p className="text-sm text-navy-600 mt-1">
-              {activity.subtitle || 'A Walkthrough of Our Disaster Data Integration and Resource Coordination Platform'}
+              {activity.subtitle ||
+                'A Walkthrough of Our Disaster Data Integration and Resource Coordination Platform'}
             </p>
           </div>
         </div>
@@ -72,13 +75,15 @@ export default function WebsiteDemoVideoActivity() {
         </span>
       </div>
 
-      {/* Video Player */}
-      <div className="rounded-2xl border border-navy-200 bg-ivory-50 p-4 sm:p-6">
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+      {/* Video Preview Card */}
+      <div className="rounded-2xl border border-navy-200 bg-ivory-50 p-5 sm:p-8">
+
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-5">
           <div>
             <h3 className="font-serif text-lg font-bold text-navy-950">
               Project Demonstration
             </h3>
+
             <p className="text-xs text-navy-500 mt-1">
               InteroperAI-ResQUE website walkthrough
             </p>
@@ -90,31 +95,31 @@ export default function WebsiteDemoVideoActivity() {
           </span>
         </div>
 
-        <div className="rounded-xl overflow-hidden bg-black border border-navy-200">
-          <video
-            key={videoUrl}
-            controls
-            preload="metadata"
-            playsInline
-            className="w-full max-h-[600px] object-contain"
-          >
-            <source src={videoUrl} type="video/mp4" />
-            Your browser does not support HTML video.
-          </video>
+        {/* Embedded Google Drive Video */}
+        <div className="w-full overflow-hidden rounded-xl border border-navy-200 bg-black aspect-video">
+          <iframe
+            src={driveVideoUrl}
+            title="InteroperAI-ResQUE Website Demonstration"
+            className="w-full h-full"
+            allow="autoplay"
+            allowFullScreen
+          />
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 mt-4">
-          <p className="text-xs text-navy-600 font-mono break-all">
-            {videoName}
+          <p className="text-xs text-navy-500">
+            InteroperAI-ResQUE – Complete Project Demonstration
           </p>
 
           <a
-            href={videoUrl}
-            download={videoName}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-950 hover:bg-navy-800 text-white text-xs font-medium transition"
+            href={driveViewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-navy-950 text-white hover:bg-violetAccent-700 font-semibold text-sm transition"
           >
-            <Download className="w-4 h-4" />
-            Download Video
+            <Play className="w-4 h-4" />
+            Open Video
+            <ExternalLink className="w-4 h-4" />
           </a>
         </div>
       </div>
@@ -122,6 +127,7 @@ export default function WebsiteDemoVideoActivity() {
       {/* Project Links */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
 
+        {/* GitHub Repositories */}
         <div>
           <h3 className="text-xs font-mono uppercase tracking-widest text-violetAccent-700 font-bold mb-4 flex items-center gap-2">
             <Github className="w-4 h-4" />
@@ -140,12 +146,14 @@ export default function WebsiteDemoVideoActivity() {
                 <span className="text-sm text-navy-800 font-medium">
                   {link.label}
                 </span>
+
                 <ExternalLink className="w-4 h-4 text-navy-500 shrink-0" />
               </a>
             ))}
           </div>
         </div>
 
+        {/* Live Project Websites */}
         <div>
           <h3 className="text-xs font-mono uppercase tracking-widest text-violetAccent-700 font-bold mb-4 flex items-center gap-2">
             <Play className="w-4 h-4" />
@@ -164,6 +172,7 @@ export default function WebsiteDemoVideoActivity() {
                 <span className="text-sm text-navy-800 font-medium">
                   {link.label}
                 </span>
+
                 <ExternalLink className="w-4 h-4 text-navy-500 shrink-0" />
               </a>
             ))}
