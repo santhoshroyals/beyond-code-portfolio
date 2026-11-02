@@ -1,22 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
-import { Edit3 } from 'lucide-react';
 
 export default function Hero() {
-  const { data, updateMeta } = usePortfolio();
-
-  const [isEditingMeta, setIsEditingMeta] = useState(false);
-  const [tempStudentName, setTempStudentName] = useState(data.meta.studentName);
-  const [tempCourseTitle, setTempCourseTitle] = useState(data.meta.courseTitle);
-
-  const handleSaveMeta = () => {
-    updateMeta({
-      studentName: tempStudentName,
-      courseTitle: tempCourseTitle
-    });
-    setIsEditingMeta(false);
-  };
+  const { data } = usePortfolio();
 
   return (
     <section className="relative min-h-[650px] flex flex-col md:flex-row overflow-hidden border-b border-ivory-200 bg-[#faf8f5]">
@@ -58,7 +45,7 @@ export default function Hero() {
             and practical applications.
           </p>
 
-          {/* Student Details Card */}
+          {/* Read-Only Student Details Card */}
           <div className="inline-flex flex-wrap items-center justify-center gap-5 sm:gap-7 px-6 py-5 sm:px-7 sm:py-6 rounded-2xl bg-white/95 border border-navy-100 shadow-editorial mb-8">
 
             {/* Student Name */}
@@ -98,6 +85,7 @@ export default function Hero() {
               </span>
             </div>
 
+            {/* Faculty */}
             {data.meta.instructor && (
               <>
                 <div className="hidden sm:block w-px h-10 bg-ivory-200" />
@@ -114,53 +102,7 @@ export default function Hero() {
               </>
             )}
 
-            <button
-              onClick={() => setIsEditingMeta(!isEditingMeta)}
-              className="p-2 text-navy-400 hover:text-violetAccent-700 rounded-lg transition"
-              title="Edit student/course details"
-            >
-              <Edit3 className="w-5 h-5" />
-            </button>
           </div>
-
-          {/* Inline Details Editor */}
-          {isEditingMeta && (
-            <div className="max-w-md mx-auto p-5 mb-8 bg-white rounded-xl border border-violetAccent-300 shadow-md text-left space-y-3">
-
-              <div>
-                <label className="text-xs font-mono uppercase text-navy-600 block mb-1">
-                  Student Name
-                </label>
-
-                <input
-                  type="text"
-                  value={tempStudentName}
-                  onChange={(e) => setTempStudentName(e.target.value)}
-                  className="w-full text-sm p-2.5 border border-navy-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-violetAccent-500"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-mono uppercase text-navy-600 block mb-1">
-                  Course Title
-                </label>
-
-                <input
-                  type="text"
-                  value={tempCourseTitle}
-                  onChange={(e) => setTempCourseTitle(e.target.value)}
-                  className="w-full text-sm p-2.5 border border-navy-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-violetAccent-500"
-                />
-              </div>
-
-              <button
-                onClick={handleSaveMeta}
-                className="w-full py-2 bg-violetAccent-600 text-white rounded-lg text-sm font-medium hover:bg-violetAccent-700 transition"
-              >
-                Update Details
-              </button>
-            </div>
-          )}
 
         </div>
       </div>
@@ -181,6 +123,7 @@ export default function Hero() {
             background: 'linear-gradient(to right, #faf8f5, rgba(250,248,245,0))'
           }}
         />
+
       </div>
 
     </section>
