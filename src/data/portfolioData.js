@@ -3,598 +3,500 @@
 
 export const initialPortfolioData = {
   meta: {
-    studentName: "Alex Rivera",
-    studentId: "PY-ADV-2026-084",
-    courseTitle: "Advanced Python Programming",
-    courseCode: "CS-504 / PY-802",
-    academicTerm: "Spring Semester 2026",
-    institution: "Department of Computer Science & Software Engineering",
-    portfolioTitle: "Beyond Code — My Python Journey",
-    portfolioSubtitle: "An Academic Monograph on Advanced Python Paradigms, IoT Signal Processing, and Applied Software Architecture",
-    instructor: "Dr. Evelyn Vance & Prof. Marcus Chen",
-    lastUpdated: "October 2026",
-    statusBadge: "Capstone Honors Portfolio"
-  },
+  studentName: "Gilledi Santhosh",
+  studentId: "23MID0233",
+  courseTitle: "Advanced Python Programming",
+  courseCode: "Advanced Python Programming",
+  academicTerm: "2026",
+  institution: "VIT Vellore",
+  portfolioTitle: "Beyond Code — My Python Journey",
+  portfolioSubtitle:
+    "My learning journey through Python programming, practical activities, and project development.",
+  instructor: "",
+  lastUpdated: "October 2026",
+  statusBadge: "Academic Portfolio"
+},
 
   about: {
-    philosophy: "Code is not merely instructions for silicon; it is a formal vocabulary for reasoning about complex real-world dynamics.",
+    philosophy: "Programming is a way to think clearly, solve problems, and turn ideas into useful solutions.",
     story: [
-      "When I commenced this Advanced Python Programming journey, Python was to me a rapid-prototyping scripting tool—convenient, readable, yet perhaps too forgiving. Over sixteen rigorous weeks, this perception was dismantled and reconstructed.",
-      "Delving deep into CPython's execution model, opcode disassemblies, the Global Interpreter Lock (GIL), descriptor protocols, and metaclasses transformed my understanding of software engineering. I realized that writing truly advanced Python is an exercise in intentional craftsmanship—balancing expressive abstraction with low-level execution characteristics.",
-      "The culmination of this growth manifested in our IoT Impairment Assessment project, where mathematical signal processing, asynchronous network telemetry, and microsecond hardware interfacing came together. This portfolio documents not only the code, but the analytical mindset, collaborative debates, failures, and breakthrough moments that defined my trajectory beyond code."
+      "My Advanced Python Programming journey helped me strengthen my understanding of Python and explore how programming concepts can be used in practical situations.",
+      "Through classroom activities, discussions, quizzes, and coding exercises, I explored Python data structures, lists, shallow and deep copying, sorting, object-oriented programming, and multithreading.",
+      "I also took part in collaborative project activities, developed an idea for an IoT-based assistive system, prepared a business thesis presentation with my team, and shared my learning through a Medium article. This portfolio brings together the work and experiences that shaped my learning throughout the course."
     ],
     principles: [
       {
-        title: "Idiomatic Architecture",
-        desc: "Embracing Python's protocol-based duck typing, context managers, and structural pattern matching over rigid monolithic hierarchies."
+        title: "Logical Problem-Solving",
+        desc: "Breaking problems into smaller steps and using Python concepts to develop clear solutions."
       },
       {
-        title: "Asynchronous Concurrency",
-        desc: "Mastering event loops, coroutine multiplexing, and non-blocking I/O to handle thousands of real-time telemetry streams efficiently."
+        title: "Learning by Practice",
+        desc: "Strengthening understanding through coding exercises, classroom activities, quizzes, and discussions."
       },
       {
-        title: "Data Integrity & Rigor",
-        desc: "Transforming raw noisy sensor feeds into clinically meaningful metrics through disciplined digital signal filtering and statistical validation."
+        title: "Collaboration",
+        desc: "Sharing ideas, coordinating with teammates, and contributing to group activities and presentations."
       },
       {
-        title: "Pedagogical Openness",
-        desc: "Sharing insights openly through Medium articles, technical seminars, and peer code reviews to elevate the entire engineering cohort."
+        title: "Continuous Improvement",
+        desc: "Reflecting on feedback, exploring new concepts, and documenting what I learn."
       }
     ]
   },
 
-  skills: {
-    categories: [
-      {
-        name: "CPython & Metaprogramming",
-        icon: "Cpu",
-        skills: [
-          { name: "Metaclasses & Class Factories", level: 95, details: "Custom type generation, runtime class validation, registry patterns" },
-          { name: "Descriptor Protocol", level: 90, details: "Non-data vs data descriptors, attribute access mechanics, lazy properties" },
-          { name: "Abstract Base Classes & Protocols", level: 92, details: "PEP 544 structural subtyping, interface enforcement" },
-          { name: "Bytecode Inspection & AST", level: 85, details: "Using `dis` module, AST manipulation for custom domain-specific analysis" }
-        ]
-      },
-      {
-        name: "Concurrency & Asynchronous I/O",
-        icon: "Zap",
-        skills: [
-          { name: "Asyncio Event Loop Engineering", level: 94, details: "Custom task scheduling, cancellation tokens, non-blocking telemetry" },
-          { name: "Multiprocessing & Shared Memory", level: 88, details: "Bypassing GIL for heavy FFT & mathematical computations using shared ctypes" },
-          { name: "Thread Safety & Locks", level: 86, details: "Deadlock prevention, condition variables, atomic primitive queues" },
-          { name: "High-Throughput WebSockets", level: 92, details: "Sub-5ms binary frame broadcasting to real-time client dashboards" }
-        ]
-      },
-      {
-        name: "IoT & Hardware Interfacing",
-        icon: "Radio",
-        skills: [
-          { name: "MicroPython & CircuitPython", level: 90, details: "ESP32 firmware scripting, memory allocation optimization, low-latency loops" },
-          { name: "I2C / SPI Sensor Protocols", level: 92, details: "Reading raw MPU6050 accelerometer & gyroscope registers at 200Hz" },
-          { name: "Digital Signal Processing (DSP)", level: 93, details: "Butterworth bandpass filters, Fast Fourier Transform (FFT) in SciPy/NumPy" },
-          { name: "Edge Fault Tolerance", level: 87, details: "Sensor jitter smoothing, automatic reconnects, ring-buffer telemetry caches" }
-        ]
-      },
-      {
-        name: "Engineering Practices & Quality",
-        icon: "CheckCircle",
-        skills: [
-          { name: "Pytest & Parametrization", level: 94, details: "Fixtures, mock telemetry, property-based testing with Hypothesis" },
-          { name: "Type Hints & Mypy Strict Mode", level: 95, details: "Generics, TypeVars, ParamSpec, strict static verification" },
-          { name: "Memory Profiling & C Extensions", level: 86, details: "Tracemalloc, memory_profiler, `__slots__` footprint reductions" },
-          { name: "Clean Architecture & Packaging", level: 91, details: "Poetry/uv packaging, CLI design via Click/Typer, CI/CD pipelines" }
-        ]
-      }
-    ]
-  },
-
-  timeline: [
+ skills: {
+  categories: [
     {
-      week: "Week 01-02",
-      phase: "Foundations & Memory Architecture",
-      title: "CPython Internals & Object Model",
-      desc: "Investigated reference counting, cyclic garbage collection, pointer manipulation, and memory layout of Python primitives. Compared memory overhead of dicts vs `__slots__`.",
-      tag: "Theory & Internals"
+      name: "Python Fundamentals",
+      icon: "Code",
+      skills: [
+        {
+          name: "Python Syntax and Core Concepts",
+          level: 75,
+          details: "Practising Python statements, variables, conditions, loops, and functions."
+        },
+        {
+          name: "Lists and Data Structures",
+          level: 75,
+          details: "Working with Python lists and commonly used data structures."
+        },
+        {
+          name: "Shallow and Deep Copy",
+          level: 75,
+          details: "Understanding object references and the differences between shallow and deep copying."
+        },
+        {
+          name: "Sorting Techniques",
+          level: 70,
+          details: "Practising sorting operations and organising data."
+        }
+      ]
     },
     {
-      week: "Week 03-04",
-      phase: "Metaprogramming & Introspection",
-      title: "Descriptors, Decorators & Metaclasses",
-      desc: "Engineered a custom ORM-like validation engine using metaclasses and the descriptor protocol to catch type invariants at import and runtime.",
-      tag: "Advanced Architecture"
+      name: "Object-Oriented Programming",
+      icon: "Boxes",
+      skills: [
+        {
+          name: "Classes and Objects",
+          level: 70,
+          details: "Understanding classes, objects, attributes, and methods."
+        },
+        {
+          name: "Core OOP Concepts",
+          level: 70,
+          details: "Learning and practising fundamental object-oriented programming concepts."
+        },
+        {
+          name: "OOP Problem Solving",
+          level: 65,
+          details: "Practising object-oriented programming questions through classroom and Padlet activities."
+        }
+      ]
     },
     {
-      week: "Week 05-06",
-      phase: "Concurrency & Event Loops",
-      title: "AsyncIO, Coroutines & GIL Bypasses",
-      desc: "Implemented an asynchronous pipeline processing concurrent HTTP/WebSocket requests. Conducted benchmarks comparing ThreadPoolExecutor, ProcessPoolExecutor, and Asyncio.",
-      tag: "High Performance"
+      name: "Multithreading and Programming Practice",
+      icon: "Workflow",
+      skills: [
+        {
+          name: "Python Multithreading",
+          level: 65,
+          details: "Exploring multithreading concepts through a Python storyboard activity."
+        },
+        {
+          name: "Shared Queue Processing",
+          level: 65,
+          details: "Understanding how threads can coordinate tasks using a shared queue."
+        },
+        {
+          name: "Logical Thinking and Debugging",
+          level: 70,
+          details: "Practising logical problem-solving and understanding program behaviour."
+        }
+      ]
     },
     {
-      week: "Week 07-09",
-      phase: "IoT & Embedded Prototyping",
-      title: "Hardware Telemetry & Signal Filtering",
-      desc: "Constructed the hardware harness with ESP32 and MPU6050. Developed MicroPython firmware and built real-time Butterworth filtering algorithms in Python to detect micro-tremors.",
-      tag: "Capstone Development"
-    },
-    {
-      week: "Week 10-12",
-      phase: "Validation & Business Translation",
-      title: "Clinical Metric Synthesis & Business Thesis",
-      desc: "Formulated the clinical scoring algorithm (Resting Tremor Ratio & Postural Instability Index). Authored business viability thesis and recorded executive audio pitch.",
-      tag: "Translational Science"
-    },
-    {
-      week: "Week 13-14",
-      phase: "Academic Symposium & Defense",
-      title: "Final Presentation, Peer Review & Portfolio Defense",
-      desc: "Delivered live symposium presentation, published Medium technical article, engaged in Padlet peer defenses, and finalized this comprehensive monograph.",
-      tag: "Dissemination"
+      name: "Communication and Collaboration",
+      icon: "Users",
+      skills: [
+        {
+          name: "Technical Writing",
+          level: 70,
+          details: "Explaining Python concepts through a published Medium article."
+        },
+        {
+          name: "Presentation Skills",
+          level: 70,
+          details: "Presenting project ideas through the InteroperAI-ResQUE team presentation."
+        },
+        {
+          name: "Teamwork",
+          level: 75,
+          details: "Participating in collaborative course activities and team-based projects."
+        }
+      ]
     }
-  ],
+  ]
+},
+ timeline: [
+  {
+    week: "Course Activity",
+    phase: "Python Learning",
+    title: "Core Python Concepts and Data Structures",
+    desc: "Practised Python fundamentals, lists, sorting, data structures, and shallow and deep copying.",
+    tag: "Programming Practice"
+  },
+  {
+    week: "Course Activity",
+    phase: "Object-Oriented Programming",
+    title: "OOP Questions and Discussion",
+    desc: "Explored object-oriented programming concepts and practised OOP questions through the Padlet activity.",
+    tag: "OOP Practice"
+  },
+  {
+    week: "Course Activity",
+    phase: "Multithreading",
+    title: "Python Multithreading and Shared Queue Processing",
+    desc: "Created a storyboard to explain multithreading and the workflow of shared queue processing.",
+    tag: "Storyboard"
+  },
+  {
+    week: "Course Activity",
+    phase: "Peer Learning",
+    title: "Python Tutorial Discussion",
+    desc: "Participated in a classroom tutorial discussion and shared ideas about Python concepts.",
+    tag: "Classroom Activity"
+  },
+  {
+    week: "Course Activity",
+    phase: "Project Ideation",
+    title: "IoT-Based Assistive System",
+    desc: "Proposed an assistive system concept to help people with Cerebral Palsy control household appliances. The project is currently at the ideation and planning stage.",
+    tag: "Project Ideation"
+  },
+  {
+    week: "Course Activity",
+    phase: "Project Communication",
+    title: "InteroperAI-ResQUE Presentation",
+    desc: "Contributed to the team's business thesis presentation through an audio recording and presentation deck.",
+    tag: "Team Project"
+  }
+],
 
-  // 10 MANDATORY ACTIVITIES
-  activities: {
-    // 1. Stars Photo
-    starsPhoto: {
-      id: "stars-photo",
-      number: 1,
-      title: "Stars Photo — Cohort Excellence Recognition",
-      subtitle: "Academic Recognition & Collaborative Celebration",
-      date: "Week 12 • Honors Showcase",
-      badge: "Recognition Award",
-      description: "A cherished capture from the semester honors ceremony celebrating exceptional peer collaboration, relentless technical curiosity, and standout contributions to our Advanced Python cohort.",
-      reflection: "Academic growth is never a solitary endeavor. Standing alongside fellow engineers who debated coroutine thread safety at midnight and helped test hardware edge cases reminds me that software engineering is inherently relational and community-driven.",
-      defaultImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
-      caption: "Cohort group snapshot at the Annual Advanced Python Engineering Symposium.",
-      participants: ["Alex Rivera", "Jordan Smith", "Priya Patel", "Prof. Marcus Chen", "Dr. Evelyn Vance"],
-      tags: ["Cohort Excellence", "Symposium", "Academic Community"]
-    },
+ // 10 MANDATORY ACTIVITIES
+activities: {
+  starsPhoto: {
+  id: "stars-photo",
+  number: 1,
+  title: "Stars Photo",
+  subtitle: "A Moment from the Course",
+  date: "Advanced Python Programming",
+  badge: "Course Memory",
+  description: "A memorable photograph from the Advanced Python Programming course, capturing a moment with classmates.",
+  reflection: "This activity reminds me that learning is not just about coding. It is also about participating, sharing experiences, and learning together.",
+  defaultImage: null,
+  caption: "A memorable moment with classmates during the course.",
+  participants: [],
+  tags: ["Course Experience", "Classmates", "Learning"]
+},
 
     // 2. Storyboard
     storyboard: {
-      id: "storyboard",
-      number: 2,
-      title: "Storyboard — End-to-End User Experience & Data Flow",
-      subtitle: "Conceptualizing the Impairment Assessment Journey",
-      date: "Week 7 • Design & Architecture Phase",
-      badge: "UX & System Design",
-      description: "A systematic 6-stage storyboard detailing how an eldercare patient or clinician interacts with the wearable sensor, how Python captures high-frequency accelerometer telemetry, and how diagnostic feedback is safely rendered.",
-      reflection: "Storyboarding compelled us to confront physical realities before writing code: How long does sensor calibration take? What happens if an elderly patient's hand slips? Mapping human friction points guided our graceful timeout and fault-recovery routines.",
-      steps: [
-        {
-          stage: 1,
-          title: "1. Device Attachment & Ergonomics",
-          desc: "Clinician places the lightweight 3D-printed strap with ESP32 & MPU6050 accelerometer onto the subject's dorsal hand.",
-          icon: "Watch",
-          image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
-        },
-        {
-          stage: 2,
-          title: "2. Zero-Baseline Calibration",
-          desc: "Python firmware runs a 5-second rest calibration to measure ambient gravitational bias and thermal drift on the 6-axis IMU.",
-          icon: "Sliders",
-          image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
-        },
-        {
-          stage: 3,
-          title: "3. Guided Motor Task Execution",
-          desc: "Auditory and visual prompts instruct the user through 30s Resting Tremor, Postural Extension, and Kinetic Finger-to-Nose trials.",
-          icon: "Activity",
-          image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
-        },
-        {
-          stage: 4,
-          title: "4. Telemetry Stream over WebSockets",
-          desc: "Raw 200 Hz XYZ acceleration vectors are encoded into binary frames and streamed via asyncio WebSocket to the local Python engine.",
-          icon: "Radio",
-          image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
-        },
-        {
-          stage: 5,
-          title: "5. Digital Signal Filtering & FFT Peak Detection",
-          desc: "SciPy digital filter eliminates gross voluntary motion; Welch's periodogram computes spectral energy in the 3.5–7.5 Hz Parkinsonian band.",
-          icon: "Cpu",
-          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-        },
-        {
-          stage: 6,
-          title: "6. Clinical Scorecard & Actionable Export",
-          desc: "Clinician receives instant percentile ranking against baseline normative datasets, with one-click signed PDF report generation.",
-          icon: "FileCheck",
-          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
-        }
-      ]
-    },
+  id: "storyboard",
+  number: 2,
+  title: "Python Multithreading and Shared Queue Processing",
+  subtitle: "Understanding Concurrent Execution",
+  date: "Advanced Python Programming",
+  badge: "Storyboard",
+  description: "A visual explanation of how Python multithreading works and how multiple threads can coordinate tasks using a shared queue.",
+  reflection: "Creating this storyboard helped me understand how tasks can be divided between threads and coordinated through a shared queue.",
+  defaultImage: null,
+  caption: "Storyboard explaining Python multithreading and shared queue processing.",
+  participants: [],
+  tags: ["Python", "Multithreading", "Shared Queue"]
+},
 
     // 3. Python Tutorial Discussion Photo
     tutorialDiscussion: {
-      id: "tutorial-discussion",
-      number: 3,
-      title: "Python Tutorial Discussion — Coroutines & Memory Semantics",
-      subtitle: "Active Peer Learning & Deep Architecture Discourse",
-      date: "Week 5 • Technical Colloquium",
-      badge: "Colloquium Session",
-      description: "Interactive peer tutorial where I co-led a deep-dive seminar on Python's async event loop mechanics, tackling real-world pitfalls like blocking the thread pool and unawaited coroutines.",
-      reflection: "Teaching is the highest form of mastery. Explaining why asyncio.gather behaves differently than asyncio.wait under partial task failure forced me to read CPython's asyncio/tasks.py source code line by line.",
-      defaultImage: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
-      discussionPoints: [
-        "How the GIL behaves during asynchronous network I/O versus CPU-bound vector math.",
-        "Memory leak tracing using Python's `tracemalloc` to diagnose cyclic references in coroutine frame objects.",
-        "Refactoring synchronous database blocking calls into non-blocking thread workers.",
-        "Using contextvars to preserve execution context across asynchronous boundaries."
-      ],
-      keyQuotes: [
-        { speaker: "Alex Rivera", quote: "Async in Python isn't parallel magic; it's cooperative multitasking where a single stubborn sleep() stalls the entire room." },
-        { speaker: "Prof. Marcus Chen", quote: "Mastering the GIL is not about cursing it; it's about designing architectures where the GIL simply becomes irrelevant." }
-      ]
-    },
+  id: "tutorial-discussion",
+  number: 3,
+  title: "Python Tutorial Discussion",
+  subtitle: "Learning Through Peer Interaction",
+  date: "Advanced Python Programming",
+  badge: "Classroom Activity",
+  description: "A classroom discussion activity where students explored Python concepts, exchanged ideas, and learned from one another.",
+  reflection: "This discussion helped me improve my understanding of Python concepts through interaction and collaborative learning.",
+  defaultImage: null,
+  caption: "A moment from the Python tutorial discussion.",
+  participants: [],
+  tags: ["Python", "Discussion", "Peer Learning"]
+},
 
     // 4. IoT-Based Assistive System for People with Cerebral Palsy (PLANNING & ARCHITECTURE STAGE)
-    iotImpairmentApp: {
-      id: "iot-impairment-app",
-      number: 4,
-      title: "IoT-Based Assistive System for People with Cerebral Palsy",
-      subtitle: "Accessible Input Architecture for Independent Appliance Control (Lights, Fans, TVs)",
-      date: "Classroom Activity • Planning & Architecture Stage",
-      badge: "Ideation & Architecture Stage",
-      isProminent: true,
-      executiveSummary: "A classroom ideation and planning project proposing an IoT-based assistive technology system to help individuals with Cerebral Palsy operate ordinary household appliances independently. The work is currently in the conceptual architecture and problem-framing stage.",
-      stats: [
-        { label: "Selected Impairment", value: "Cerebral Palsy", desc: "Classroom impairment focus" },
-        { label: "Target Appliances", value: "Lights, Fans, TVs", desc: "Household accessibility" },
-        { label: "Proposed Solution", value: "Assistive IoT", desc: "Accessible input translation" },
-        { label: "Project Status", value: "Ideation Stage", desc: "Preliminary planning & design" }
-      ],
-      ideationJourney: [
-        {
-          step: "01",
-          title: "1. Problem Selection",
-          desc: "As part of the classroom activity, I was asked to select a physical impairment. I selected Cerebral Palsy.",
-          badge: "Problem Selection"
-        },
-        {
-          step: "02",
-          title: "2. Identifying a Challenge",
-          desc: "I explored how individuals with Cerebral Palsy may face difficulties operating ordinary household appliances because of motor-control limitations.",
-          badge: "Identifying a Challenge"
-        },
-        {
-          step: "03",
-          title: "3. Proposed IoT Solution",
-          desc: "I proposed an IoT-based assistive system that could help users control household appliances such as lights, fans and televisions through accessible input methods.",
-          badge: "Proposed IoT Solution"
-        },
-        {
-          step: "04",
-          title: "4. Initial Architecture Planning",
-          desc: "I prepared a conceptual five-stage workflow:",
-          stages: [
-            "Accessible User Input",
-            "Input Processing",
-            "IoT Controller",
-            "Appliance Control",
-            "User Feedback"
-          ],
-          badge: "Initial Architecture Planning"
-        },
-        {
-          step: "05",
-          title: "5. Current Progress",
-          desc: "The work is currently at the problem identification, ideation and preliminary architecture planning stage. Hardware selection, prototype development, application development and testing have not yet started.",
-          badge: "Current Progress"
-        }
-      ],
-      problemStatement: "Individuals living with Cerebral Palsy often experience varying degrees of motor impairment, involuntary movements, or reduced fine motor coordination. Standard household controls—such as tiny toggle switches, wall dials, and complex infrared TV remotes—require precise finger dexterity that can present significant barriers to daily living independence.",
-      solutionStatement: "This project proposes a modular, accessible IoT assistive architecture that decouples physical user input from appliance control. By evaluating adaptive, accessible inputs (such as low-force switches or tailored touch surfaces) and routing them through a software processing layer to an IoT controller, users can reliably trigger appliance actions with clear confirmation feedback.",
-      conceptualWorkflow: [
-        {
-          stage: "01",
-          name: "Accessible User Input",
-          desc: "Adaptive input tailored to the user's physical capabilities (e.g., low-force switches, proximity sensors, or accessible assistive switches).",
-          icon: "MousePointerClick"
-        },
-        {
-          stage: "02",
-          name: "Input Processing",
-          desc: "Software-level filtering, signal debouncing, accidental-trigger prevention, and intent recognition to accommodate involuntary movements.",
-          icon: "Cpu"
-        },
-        {
-          stage: "03",
-          name: "IoT Controller",
-          desc: "Central controller coordinating command routing, state tracking, scheduling, and protocol translation.",
-          icon: "Radio"
-        },
-        {
-          stage: "04",
-          name: "Appliance Control",
-          desc: "Safe actuation of household appliances including lights, fans, and televisions via relays, infrared emitters, or smart plugs.",
-          icon: "Power"
-        },
-        {
-          stage: "05",
-          name: "User Feedback",
-          desc: "Multi-modal confirmation (visual indicators, auditory chimes, or screen status updates) confirming successful appliance activation.",
-          icon: "Volume2"
-        }
-      ],
-      hardwareEvaluation: [
-        {
-          category: "Accessible Input Interface Options",
-          candidates: "Low-force mechanical switches, capacitive touch pads, proximity sensors, or sip-and-puff interfaces",
-          considerations: "Accommodating spasticity, tremors, or limited range of motion without requiring fine finger dexterity; preventing fatigue",
-          status: "Under Evaluation (Not Finalized)"
-        },
-        {
-          category: "IoT Controller Platform",
-          candidates: "Microcontroller / single-board computer edge options (ESP32 / Raspberry Pi Pico / Pi Zero)",
-          considerations: "Low latency, reliable wireless connectivity, safe local execution without cloud dependency, power efficiency",
-          status: "Under Evaluation (Not Finalized)"
-        },
-        {
-          category: "Appliance Actuation Modules",
-          candidates: "Optoisolated relay modules (for lights/fans), IR blasters (for TV control), smart home wireless standards",
-          considerations: "Electrical isolation, mains power safety standards, fail-safe default states during power interruptions",
-          status: "Under Evaluation (Not Finalized)"
-        },
-        {
-          category: "User Feedback Modality",
-          candidates: "Auditory acknowledgment tones, high-contrast LED status lights, local display screen, or companion web interface",
-          considerations: "Ensuring non-intrusive, clear confirmation that an appliance command has been registered and executed",
-          status: "Under Evaluation (Not Finalized)"
-        }
-      ],
-      conceptualSpecification: `# ==============================================================================
-# Conceptual Architecture: IoT Assistive Appliance Control System
-# Target Audience: People with Cerebral Palsy | Status: Planning & Architecture
-# ==============================================================================
-
-"""
-Proposed Conceptual Workflow:
-User Accessible Input -> Input Processing -> IoT Controller -> Appliance Control -> Feedback to User
-"""
-
-class AccessibleInputInterface:
-    """Represents an accessible input mechanism tailored for user capability."""
-    def read_raw_trigger(self) -> bool:
-        """Sample accessible switch or sensor input."""
-        pass
-
-class InputProcessingEngine:
-    """Filters signals to eliminate accidental taps and debounce involuntary tremors."""
-    def validate_intent(self, raw_signal: bool, hold_duration_ms: float) -> bool:
-        """Confirms that input represents deliberate user intent."""
-        pass
-
-class IoTApplianceController:
-    """Manages appliance state and issues commands."""
-    def dispatch_command(self, appliance: str, action: str) -> bool:
-        """Actuates target appliance (light, fan, TV power/channel)."""
-        pass
-
-class UserFeedbackNotifier:
-    """Provides immediate multi-modal confirmation back to user."""
-    def notify_user(self, appliance: str, status: str) -> None:
-        """Triggers auditory chime, LED indicator, or UI confirmation."""
-        pass
-`,
-      defaultHardwareImage: null,
-      defaultTestingImage: null,
-      defaultArchitectureDiagram: null,
-      defaultAppScreenshot: null,
-      academicReflections: [
-        "Designing assistive technology for individuals with Cerebral Palsy demands that software adapt to the user's natural physical expressions rather than forcing the user to conform to rigid physical interfaces.",
-        "Input processing algorithms must balance rapid responsiveness with intelligent filtering to prevent accidental activations from sudden spasms or involuntary motor reflexes.",
-        "Safety and fail-safe design are paramount: appliance control interfaces must remain completely stable, fail into safe states during power interruptions, and provide immediate confirmation feedback."
-      ]
-    },
+    iotProject: {
+  id: "iot-project",
+  number: 4,
+  title: "IoT-Based Assistive System for People with Cerebral Palsy",
+  subtitle: "An Assistive Approach to Everyday Independence",
+  date: "Advanced Python Programming",
+  badge: "Project Ideation",
+  description: "An IoT-based assistive system concept designed to help people with Cerebral Palsy control essential household appliances such as lights, fans, and televisions through accessible input interfaces.",
+  reflection: "This project helped me explore how technology can support accessibility and independence. I worked on the initial concept and system architecture. Hardware selection and implementation are still part of the planned work.",
+  defaultImage: null,
+  caption: "Proposed system architecture for the IoT-based assistive application.",
+  participants: [],
+  tags: ["IoT", "Assistive Technology", "Accessibility", "Project Ideation"]
+},
 
     // 5. Class Quiz
     classQuiz: {
-      id: "class-quiz",
-      number: 5,
-      title: "Python Concepts and Data Structures Quiz",
-      subtitle: "Team Academic Competition & Concept Mastery",
-      badge: "Second Place – Team Participation",
-      achievement: "Second Place – Team Participation",
-      description: "Classroom quiz competition evaluating understanding of fundamental Python concepts, data structures, and memory references through collaborative team participation.",
-      learningExperience: "Participating in this quiz helped me understand Python concepts more effectively and develop a stronger interest in the subject. Securing second place with my team gave me valuable experience in teamwork, interacting with other teams and participating in friendly academic competition. It also motivated me to attend classes with greater interest and actively engage in classroom activities.",
-      topicsCovered: [
-        "Shallow Copy",
-        "Deep Copy",
-        "Sorting in Python",
-        "Lists",
-        "Python Data Structures"
-      ],
-      keyTakeaways: [
-        "Improved understanding of Python concepts.",
-        "Teamwork and coordination.",
-        "Confidence in academic competitions.",
-        "Interaction and knowledge sharing with other teams.",
-        "Increased interest in Python."
-      ],
-      defaultImage: null,
-      caption: "Actual classroom quiz photograph awaiting upload."
-    },
-
+  id: "class-quiz",
+  number: 5,
+  title: "Python Concepts and Data Structures Quiz",
+  subtitle: "Team Quiz Competition",
+  badge: "Second Place – Team Participation",
+  achievement: "Second Place – Team Participation",
+  description: "Participated in a classroom quiz covering Python fundamentals, data structures, sorting, and object copying as part of a team.",
+  learningExperience: "The quiz gave me an opportunity to test my understanding of Python concepts in a competitive classroom environment. Securing second place with my team was a rewarding experience that encouraged me to participate more actively, collaborate with others, and strengthen my programming knowledge.",
+  topicsCovered: [
+    "Shallow Copy",
+    "Deep Copy",
+    "Sorting in Python",
+    "Lists",
+    "Python Data Structures"
+  ],
+  keyTakeaways: [
+    "Strengthened understanding of Python concepts.",
+    "Improved teamwork and coordination.",
+    "Gained confidence through team participation.",
+    "Learned through interaction with other teams.",
+    "Developed greater interest in Python programming."
+  ],
+  defaultImage: null,
+  caption: "Classroom quiz participation and second-place team achievement."
+},
     // 6. Medium Blog
     mediumBlog: {
-      id: "medium-blog",
-      number: 6,
-      title: "Medium Blog",
-      subtitle: "Published Technical Article on Python Data Structures",
-      badge: "Published",
-      platform: "Medium",
-      author: "Gilledi Santhosh",
-      articleTitle: "When a Copy Isn't Really a Copy: The Hidden Behaviour of Python Lists",
-      mediumUrl: "https://medium.com/@gilledi.santhosh2023/when-a-copy-isnt-really-a-copy-the-hidden-behaviour-of-python-lists-b4450ec6a4a6",
-      description: "I published a Medium article exploring the behaviour of Python lists when copying them. The article focuses on understanding why copying a list may not always create an entirely independent copy.",
-      keyLearningAreas: [
-        "Python list behaviour.",
-        "Understanding list copying.",
-        "Shallow copy and deep copy concepts.",
-        "Understanding how changes to copied lists can affect the original data."
-      ],
-      defaultBlogImage: null,
-      caption: "Screenshot of the published Medium article by Gilledi Santhosh."
-    },
+  id: "medium-blog",
+  number: 6,
+  title: "Medium Blog",
+  subtitle: "Technical Article on Python List Copying",
+  badge: "Published",
+  platform: "Medium",
+  author: "Gilledi Santhosh",
+  articleTitle: "When a Copy Isn't Really a Copy: The Hidden Behaviour of Python Lists",
+  mediumUrl: "https://medium.com/@gilledi.santhosh2023/when-a-copy-isnt-really-a-copy-the-hidden-behaviour-of-python-lists-b4450ec6a4a6",
+  description: "Published a technical article on Medium explaining how Python lists behave when copied, with a focus on shallow copying, deep copying, and object references.",
+  keyLearningAreas: [
+    "Python list behaviour and object references.",
+    "Differences between shallow copy and deep copy.",
+    "How changes to copied lists can affect original data.",
+    "Explaining programming concepts through technical writing."
+  ],
+  defaultBlogImage: null,
+  caption: "Published Medium article by Gilledi Santhosh."
+},
 
     // 7. Audio Recording — Business Thesis
     audioBusinessThesis: {
-      id: "audio-business-thesis",
-      number: 7,
-      title: "InteroperAI-ResQUE – Business Thesis Audio Presentation",
-      subtitle: "Team presentation explaining our disaster data integration and resource coordination project.",
-      badge: "Business Thesis Presentation",
-      projectOverview: [
-        { label: "Disaster Data Integration", desc: "Uploads and validates disaster-related datasets from different sources." },
-        { label: "Data Standardization", desc: "Maps different dataset formats into a consistent structure." },
-        { label: "Disaster Assessment", desc: "Presents disaster-related information through dashboards." },
-        { label: "Resource Coordination", desc: "Displays shelter and resource information to support disaster-response planning." }
-      ],
-      repoLinks: [
-        { label: "Member 1 – GitHub Repository", url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member1" },
-        { label: "Member 2 – GitHub Repository", url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member2" }
-      ],
-      liveLinks: [
-        { label: "Member 1 – Live Website", url: "https://interoper-ai-res-que-member1-29p4.vercel.app/" },
-        { label: "Member 2 – Live Website", url: "https://interoper-ai-res-que-member2.vercel.app/" }
-      ],
-      learningExperience: "This activity helped me understand our project more deeply, explain technical ideas clearly through speech, coordinate effectively with teammates, and present our work in a business-oriented manner. Recording the audio presentation encouraged me to think about how to communicate complex technical concepts to a broader audience.",
-      teamPhotoCaption: "InteroperAI-ResQUE team during the classroom presentation session.",
-      audioNote: "Audio recording of the team presentation by Gilledi Santhosh (23MID0233).",
-      defaultTeamPhoto: null,
-      defaultAudio: null
+  id: "audio-business-thesis",
+  number: 7,
+  title: "InteroperAI-ResQUE – Business Thesis Audio Presentation",
+  subtitle: "Presenting Our Disaster Data Integration and Resource Coordination Project",
+  badge: "Business Thesis Presentation",
+
+  projectOverview: [
+    {
+      label: "Disaster Data Integration",
+      desc: "Brings together disaster-related datasets from different sources."
     },
+    {
+      label: "Data Standardization",
+      desc: "Maps different dataset formats into a consistent structure."
+    },
+    {
+      label: "Disaster Assessment",
+      desc: "Displays disaster-related information through dashboards."
+    },
+    {
+      label: "Resource Coordination",
+      desc: "Organises shelter and resource information to support response planning."
+    }
+  ],
+
+  repoLinks: [
+    {
+      label: "Member 1 – GitHub Repository",
+      url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member1"
+    },
+    {
+      label: "Member 2 – GitHub Repository",
+      url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member2"
+    }
+  ],
+
+  liveLinks: [
+    {
+      label: "Member 1 – Live Website",
+      url: "https://interoper-ai-res-que-member1-29p4.vercel.app/"
+    },
+    {
+      label: "Member 2 – Live Website",
+      url: "https://interoper-ai-res-que-member2.vercel.app/"
+    }
+  ],
+
+  learningExperience: "This activity helped me understand our project better and communicate its purpose, features, and practical applications. Preparing the audio presentation also improved my confidence in explaining technical ideas, coordinating with teammates, and presenting our work clearly.",
+
+  teamPhotoCaption: "InteroperAI-ResQUE team during the classroom presentation.",
+
+  audioNote: "Audio recording of the team business thesis presentation by Gilledi Santhosh (23MID0233).",
+
+  defaultTeamPhoto: null,
+  defaultAudio: null
+},
 
     // 8. Website PPT
     websitePpt: {
-      id: "website-ppt",
-      number: 8,
-      title: "Website PPT – Presentation Deck",
-      subtitle: "Presentation slides and academic defense deck.",
-      badge: "Presentation Deck",
-      caption: "Upload your PowerPoint or PDF presentation as evidence."
-    },
+  id: "website-ppt",
+  number: 8,
+  title: "InteroperAI-ResQUE – Website Presentation",
+  subtitle: "Presenting the Project Concept, Features, and Workflow",
+  badge: "Presentation Deck",
 
+  description: "A presentation deck explaining the InteroperAI-ResQUE project, its objectives, and its main features, including disaster data integration, data standardization, disaster assessment, and resource coordination.",
+
+  reflection: "Preparing this presentation helped me organise the project details, understand the overall workflow, and explain our technical work clearly. It also improved my presentation skills and confidence in communicating project ideas.",
+
+  caption: "Presentation slides explaining the InteroperAI-ResQUE project.",
+
+  defaultImage: null
+},
     // 9. Website Demo Video
     websiteDemoVideo: {
-      id: "website-demo-video",
-      number: 9,
-      title: "InteroperAI-ResQUE – Website Demo Video",
-      subtitle: "Demonstration walkthrough of our disaster data integration and resource coordination platform.",
-      badge: "Website Demo Video",
-      repoLinks: [
-        { label: "Member 1 – GitHub Repository", url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member1" },
-        { label: "Member 2 – GitHub Repository", url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member2" }
-      ],
-      liveLinks: [
-        { label: "Member 1 – Live Website", url: "https://interoper-ai-res-que-member1-29p4.vercel.app/" },
-        { label: "Member 2 – Live Website", url: "https://interoper-ai-res-que-member2.vercel.app/" }
-      ]
-    },
+  id: "website-demo-video",
+  number: 9,
+  title: "InteroperAI-ResQUE – Website Demo Video",
+  subtitle: "A Walkthrough of Our Disaster Data Integration and Resource Coordination Platform",
+  badge: "Website Demo Video",
 
+  description: "A walkthrough of the InteroperAI-ResQUE website demonstrating its main features, including disaster data integration, data standardization, disaster assessment, and resource coordination.",
+
+  repoLinks: [
+    {
+      label: "Member 1 – GitHub Repository",
+      url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member1"
+    },
+    {
+      label: "Member 2 – GitHub Repository",
+      url: "https://github.com/SalvaSoumya/InteroperAI-ResQUE-Member2"
+    }
+  ],
+
+  liveLinks: [
+    {
+      label: "Member 1 – Live Website",
+      url: "https://interoper-ai-res-que-member1-29p4.vercel.app/"
+    },
+    {
+      label: "Member 2 – Live Website",
+      url: "https://interoper-ai-res-que-member2.vercel.app/"
+    }
+  ],
+
+  reflection: "Creating the website demonstration helped me understand how to present a project's features in a clear sequence. It also improved my confidence in explaining the platform, demonstrating its workflow, and communicating technical ideas through a practical walkthrough.",
+
+  caption: "Website demonstration video showcasing the InteroperAI-ResQUE project.",
+
+  defaultVideo: null
+},
     // 10. Padlet Screenshots with Questions
     padletScreenshots: {
-      id: "padlet-screenshots",
-      number: 10,
-      title: "Object-Oriented Python Question Sets – Padlet Discussion",
-      subtitle: "Collaborative Student Q&A and Problem-Solving Forum",
-      badge: "Padlet Contribution",
-      padletUrl: "https://padlet.com/sharmilabanuk/object-oriented-python-question-sets-created-by-students-dmwur6hlhsjj013w",
-      description: "As part of Advanced Python Programming, we participated in a Padlet activity where students shared question sets related to Object-Oriented Programming in Python.\n\nMy contribution is visible in the Padlet under the name Gilledi Santhosh. It includes a 19-page document titled LeetCode OOPS Questions Practice.",
-      learningOutcomes: [
-        "Practised Object-Oriented Programming concepts.",
-        "Explored programming questions through problem-solving.",
-        "Learned from question sets shared by other students.",
-        "Improved familiarity with OOP practice questions."
-      ],
-      defaultOverviewImage: null,
-      defaultContributionImage: null
-    }
+  id: "padlet-screenshots",
+  number: 10,
+  title: "Object-Oriented Python Question Sets – Padlet Discussion",
+  subtitle: "Collaborative Student Q&A and Problem-Solving Forum",
+  badge: "Padlet Contribution",
+
+  padletUrl: "https://padlet.com/sharmilabanuk/object-oriented-python-question-sets-created-by-students-dmwur6hlhsjj013w",
+
+  contributionUrl: "https://padlet.com/sharmilabanuk/object-oriented-python-question-sets-created-by-students-dmwur6hlhsjj013w/wish/LNV1Q7rnJKK3amq3",
+
+  description: "As part of the Advanced Python Programming course, I participated in a collaborative Padlet activity where students shared question sets related to Object-Oriented Programming in Python.\n\nMy individual contribution is available under the name Gilledi Santhosh. It includes a 19-page document titled LeetCode OOPS Questions Practice, containing questions for practising object-oriented programming concepts.",
+
+  learningOutcomes: [
+    "Revisited important Object-Oriented Programming concepts.",
+    "Practised applying OOP concepts through programming questions.",
+    "Improved problem-solving through question-based practice.",
+    "Explored learning resources shared by other students.",
+    "Gained experience in contributing to a collaborative learning platform."
+  ],
+
+  defaultOverviewImage: null,
+  defaultContributionImage: null
+},
+
+challenges: [
+  {
+    title: "Understanding Shallow Copy and Deep Copy",
+    category: "Python Lists and Data Structures",
+    problem: "I initially found it difficult to understand how changes to nested elements in a copied list could also affect the original list.",
+    solution: "I explored shallow copy and deep copy using practical Python examples and compared how each handles nested objects and references.",
+    impact: "I developed a clearer understanding of object references and how Python handles copied data."
   },
-
-  challenges: [
-    {
-      title: "Real-Time Telemetry Jitter & Buffer Starvation",
-      category: "IoT & Hardware Interfacing",
-      problem: "When reading the MPU6050 via I2C at 200 Hz, occasional Wi-Fi latency spikes caused the WebSocket buffer to stall, dropping contiguous frames and ruining the FFT spectrum.",
-      solution: "Engineered a circular ring buffer in MicroPython using DMA memory and implemented an asynchronous sliding-window batching worker in Python with exponential backoff and frame sequence validation.",
-      impact: "Reduced dropped sample rate from 6.8% to 0.02%, preserving spectral fidelity for clinical analysis."
-    },
-    {
-      title: "GIL Lock Contention During FFT Signal Processing",
-      category: "CPython & Concurrency",
-      problem: "Running real-time Fast Fourier Transforms on streaming arrays inside the main asyncio event loop caused frame stutter in the web user interface.",
-      solution: "Offloaded computationally heavy SciPy FFT tasks to a background `multiprocessing.Pool` utilizing Python 3.8+ `multiprocessing.shared_memory` to zero-copy vector buffers across process boundaries.",
-      impact: "Eliminated event loop latency spikes, maintaining UI responsiveness at 60 FPS while running 200Hz digital filters."
-    },
-    {
-      title: "Memory Leaks in Long-Running Coroutines",
-      category: "Memory Profiling & Debugging",
-      problem: "During a 6-hour endurance run, Python process memory steadily grew by ~45 MB/hour due to retained tracebacks in custom exception logging handlers.",
-      solution: "Employed `tracemalloc` and `objgraph` to isolate cyclic frame references. Explicitly purged `exc.__traceback__ = None` after logging and converted large metadata dictionaries to lightweight `__slots__` dataclasses.",
-      impact: "Stabilized long-term memory footprint at a constant 34 MB over indefinite multi-day testing cycles."
-    },
-    {
-      title: "Sensor Drift in Dynamic Calibration",
-      category: "Digital Signal Processing",
-      problem: "Thermal drift on the gyroscope registers led to baseline wandering, falsely inflating low-frequency energy (0.5–2.0 Hz) in the tremor power spectrum.",
-      solution: "Implemented a dynamic zero-velocity update (ZUPT) algorithm combined with a 4th-order highpass Butterworth filter (cutoff 2.5 Hz) to continuously recalibrate the resting baseline.",
-      impact: "Achieved baseline drift rejection of 99.4%, isolating pure kinematic tremor signals."
-    }
-  ],
-
-  takeaways: [
-    {
-      principle: "1. Language Mechanics Dictate Architecture",
-      desc: "Understanding CPython's reference counting, GIL boundaries, and frame object lifecycle is the prerequisite for designing performant, leak-free systems."
-    },
-    {
-      principle: "2. The Beauty of Protocol-Oriented Python",
-      desc: "Python's true strength lies not in deep class inheritance trees, but in small, composable protocols: context managers, async iterators, and descriptors."
-    },
-    {
-      principle: "3. Hardware Grounding Grounds Software",
-      desc: "Interfacing Python with microsecond physical sensors forces a programmer to respect physics, memory locality, and latency in ways pure web development never does."
-    },
-    {
-      principle: "4. Rigorous Signal Validation",
-      desc: "In biomedical engineering, clean code is useless without mathematical validity. Verifying algorithms against known physical baselines must precede any visual frontend."
-    },
-    {
-      principle: "5. Collaborative Dissemination",
-      desc: "Writing code is only half the battle. Documenting decisions, authoring accessible blog articles, and actively defending choices on Padlet transforms a coder into a leader."
-    },
-    {
-      principle: "6. Beyond Code is Human Impact",
-      desc: "Ultimately, the code we write exists to solve real human problems—in our case, providing dignified, accessible diagnostic tools for individuals facing motor impairments."
-    }
-  ],
-
-  finalReflection: {
-    title: "A Final Word: The Transformation from Coder to Architect",
-    date: "October 2026",
-    signoff: "Alex Rivera, Advanced Python Fellow",
-    essay: [
-      "Sixteen weeks ago, I entered this course believing I was already a proficient Python programmer. I knew the syntax, could write list comprehensions in my sleep, and had deployed several web APIs. But proficiency in a language's surface syntax is profoundly different from possessing an architectural understanding of its soul.",
-      "This course pushed me to gaze into the engine room: how CPython allocates memory, how the Global Interpreter Lock arbitrates concurrency, how metaclasses construct classes before a single line of business logic executes, and how digital signal algorithms in NumPy distill meaning from chaotic sensor noise.",
-      "Building the IoT Impairment Assessment system was both humbling and exhilarating. In software tutorials, data is always clean and networks never falter. On physical hardware, sensors drift, wireless packets drop, and CPU caches thrash. Overcoming these realities through systematic profiling, rigorous mathematical filtering, and resilient asynchronous design forged my identity as an engineer.",
-      "As I conclude this portfolio, 'Beyond Code' is no longer just a title. It is my engineering ethos: that true software excellence lies at the intersection of computational rigor, empirical validation, and genuine empathy for the human lives our systems touch."
-    ],
-    facultyEndorsements: [
-      {
-        professor: "Dr. Evelyn Vance",
-        role: "Associate Professor of Computer Science & Capstone Advisor",
-        quote: "Alex has demonstrated extraordinary technical depth, seamlessly bridging abstract CPython internals with rigorous real-time biomedical hardware engineering. This portfolio exemplifies academic and engineering excellence."
-      },
-      {
-        professor: "Prof. Marcus Chen",
-        role: "Lead Instructor, Advanced Python Programming",
-        quote: "Beyond Alex's immaculate code, their willingness to mentor peers, demystify concurrency on Padlet, and translate complex technical findings into a commercially viable thesis sets a benchmark for the department."
-      }
-    ]
+  {
+    title: "Applying Object-Oriented Programming Concepts",
+    category: "Object-Oriented Programming",
+    problem: "Remembering OOP concepts was not enough; I needed practice applying them to programming questions.",
+    solution: "I used the Padlet question-set activity and OOP practice questions to revisit concepts and work through examples.",
+    impact: "I gained more confidence in understanding and applying OOP concepts through problem-solving."
+  },
+  {
+    title: "Explaining Programming Workflows",
+    category: "Python Multithreading",
+    problem: "Understanding and explaining a workflow with multiple threads and shared tasks can be challenging when all the steps are presented together.",
+    solution: "I created a storyboard that divided multithreading and shared queue processing into smaller, connected stages.",
+    impact: "This helped me understand the sequence of operations and communicate the concept more clearly."
   }
-};
+],
 
+takeaways: [
+  {
+    principle: "1. Understand Python's Data Behaviour",
+    desc: "Learning about lists, object references, shallow copy, and deep copy helped me understand how Python handles data."
+  },
+  {
+    principle: "2. Learn OOP Through Practice",
+    desc: "Working on OOP question sets helped me revisit programming concepts and apply them to practical questions."
+  },
+  {
+    principle: "3. Visualise Complex Workflows",
+    desc: "Creating a multithreading storyboard taught me how to break a programming concept into smaller and easier-to-follow steps."
+  },
+  {
+    principle: "4. Grow Through Collaboration",
+    desc: "Classroom discussions, team activities, and project presentations helped me exchange ideas and learn from others."
+  },
+  {
+    principle: "5. Communicate Technical Knowledge",
+    desc: "Writing a Medium article gave me an opportunity to explain shallow and deep copying in Python through my own words."
+  },
+  {
+    principle: "6. Think About Real-World Applications",
+    desc: "The IoT assistive-system activity encouraged me to explore how technology could support accessibility and everyday independence."
+  }
+],
+
+finalReflection: {
+  title: "A Final Reflection: My Learning Beyond Code",
+  date: "October 2026",
+  signoff: "Gilledi Santhosh",
+  essay: [
+    "My journey through Advanced Python Programming has been a valuable learning experience. It gave me opportunities to strengthen my understanding of Python concepts, improve my problem-solving approach, and explore different ways of learning through classroom activities and practical exercises.",
+    "Throughout the course, I worked on activities covering Python data structures, shallow and deep copying, Object-Oriented Programming, and multithreading. Participating in the classroom quiz, contributing OOP questions through Padlet, and creating a multithreading storyboard helped me understand concepts through practice and collaboration. Writing a Medium article also encouraged me to communicate technical ideas in a clear and structured way.",
+    "Beyond programming concepts, the course activities introduced me to project communication and practical problem identification. Through the InteroperAI-ResQUE team presentation and website demonstration, I gained experience explaining a project's features and workflow. The IoT-based assistive-system activity encouraged me to think about accessibility challenges and plan a possible technology-based solution. This project is currently at the ideation and architecture stage.",
+    "Looking back, this portfolio represents more than a collection of assignments. It brings together my learning experiences, teamwork, technical writing, project contributions, and personal reflections. Each activity taught me something different and motivated me to keep practising, improving my skills, and exploring how technology can solve meaningful problems."
+  ],
+  facultyEndorsements: []
+}
+}
+};

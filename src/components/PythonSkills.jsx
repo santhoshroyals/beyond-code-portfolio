@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
-import { Cpu, Zap, Radio, CheckCircle, Code, Layers, Sparkles } from 'lucide-react';
+import { Cpu, Zap, Radio, CheckCircle, Code } from 'lucide-react';
 
 const iconMap = {
   Cpu: Cpu,
@@ -19,17 +20,21 @@ export default function PythonSkills() {
   return (
     <section id="skills" className="scroll-mt-24 py-16 sm:py-24 border-b border-ivory-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Section Header */}
         <div className="flex items-center space-x-2 text-violetAccent-700 font-mono text-xs uppercase tracking-widest font-bold mb-3">
           <Code className="w-4 h-4" />
-          <span>Technical Competency Framework</span>
+          <span>Technical Skills & Learning</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy-950 mb-4">
           Python Skills Matrix
         </h2>
+
         <p className="text-navy-700 text-sm sm:text-base max-w-2xl leading-relaxed mb-10">
-          Rigorous competencies honed across CPython runtime introspection, asynchronous network engineering, low-power embedded telemetry, and disciplined software architecture.
+          My learning journey in Python programming, covering programming
+          fundamentals, object-oriented concepts, data structures,
+          problem-solving, and practical project development.
         </p>
 
         {/* Category Switcher Tabs */}
@@ -37,6 +42,7 @@ export default function PythonSkills() {
           {categories.map((cat, idx) => {
             const Icon = iconMap[cat.icon] || Code;
             const isSelected = selectedCategory === idx;
+
             return (
               <button
                 key={idx}
@@ -65,12 +71,13 @@ export default function PythonSkills() {
                 <h4 className="text-base font-serif font-bold text-navy-950">
                   {skill.name}
                 </h4>
+
                 <span className="text-xs font-mono font-bold text-violetAccent-700 bg-violetAccent-50 px-2 py-0.5 rounded border border-violetAccent-200">
                   {skill.level}%
                 </span>
               </div>
 
-              {/* Animated Progress Bar */}
+              {/* Progress Bar */}
               <div className="w-full h-1.5 bg-ivory-200 rounded-full overflow-hidden mb-3">
                 <div
                   className="h-full bg-gradient-to-r from-violetAccent-600 to-blueAccent-600 rounded-full transition-all duration-700"
@@ -85,28 +92,41 @@ export default function PythonSkills() {
           ))}
         </div>
 
-        {/* Standard Library & Framework Badges */}
+        {/* Python Concepts & Tools */}
         <div className="mt-10 p-6 rounded-2xl bg-ivory-50 border border-ivory-200 flex flex-wrap items-center justify-between gap-4">
+
           <div>
             <span className="text-xs font-mono uppercase text-navy-500 font-bold block mb-1">
-              Primary Toolkit & CPython Ecosystem
+              Python Concepts & Tools
             </span>
-            <p className="text-xs text-navy-700">Standard modules and scientific stacks leveraged in this coursework:</p>
+
+            <p className="text-xs text-navy-700">
+              Concepts explored through coursework and practical activities:
+            </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
             {[
-              "asyncio", "multiprocessing", "dis", "tracemalloc", "NumPy", "SciPy", 
-              "FastAPI", "WebSockets", "MicroPython", "pytest", "mypy", "dataclasses"
+              "Python Fundamentals",
+              "Lists & Tuples",
+              "Dictionaries",
+              "Object-Oriented Programming",
+              "Shallow & Deep Copy",
+              "Multithreading",
+              "Shared Queue Processing",
+              "Problem Solving"
             ].map((pkg, idx) => (
-              <span key={idx} className="px-2.5 py-1 rounded-lg bg-white border border-ivory-300 text-xs font-mono text-navy-800 shadow-2xs">
+              <span
+                key={idx}
+                className="px-2.5 py-1 rounded-lg bg-white border border-ivory-300 text-xs font-mono text-navy-800 shadow-2xs"
+              >
                 {pkg}
               </span>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
 }
-
