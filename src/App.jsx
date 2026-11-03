@@ -8,6 +8,7 @@ import AboutJourney from './components/AboutJourney';
 import ActivitiesSection from './components/activities/ActivitiesSection';
 import EvidenceGallery from './components/EvidenceGallery';
 import CourseworkAssignment from './components/CourseworkAssignment';
+import VtopSubmissions from './components/activities/VtopSubmissions';
 import Footer from './components/Footer';
 import Lightbox from './components/common/Lightbox';
 
@@ -28,6 +29,9 @@ export default function App() {
           <EvidenceGallery />
 
           <CourseworkAssignment />
+
+          {/* VTOP Submissions - Immediately before Thank You */}
+          <VtopSubmissions />
 
           <ThankYouNote />
         </main>

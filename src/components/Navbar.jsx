@@ -18,11 +18,12 @@ const activitiesList = [
     num: '06',
     name: 'Audio Presentation',
     id: 'audio-business-thesis',
-    aliases: ['audio-presentation', 'audio-business-thesis']
+    aliases: ['audio-presentation']
   },
   { num: '07', name: 'Website PPT', id: 'website-ppt' },
   { num: '08', name: 'Website Demo', id: 'website-demo-video' },
-  { num: '09', name: 'Padlet Discussion', id: 'padlet-screenshots' }
+  { num: '09', name: 'Padlet Discussion', id: 'padlet-screenshots' },
+  { num: '10', name: 'Submissions', id: 'submissions' }
 ];
 
 export default function Navbar() {
@@ -58,7 +59,6 @@ export default function Navbar() {
     event.preventDefault();
 
     const possibleIds = [id, ...aliases];
-
     let section = null;
 
     for (const sectionId of possibleIds) {
@@ -79,11 +79,7 @@ export default function Navbar() {
         behavior: 'smooth'
       });
 
-      window.history.replaceState(
-        null,
-        '',
-        `#${section.id}`
-      );
+      window.history.replaceState(null, '', `#${section.id}`);
     } else {
       console.warn(`Navigation target not found: ${id}`);
     }
@@ -164,6 +160,7 @@ export default function Navbar() {
                 System Architecture
               </a>
 
+              {/* Coursework - Tree Coverage Task */}
               <a
                 href="#coursework-assignment"
                 onClick={(e) =>
@@ -252,14 +249,13 @@ export default function Navbar() {
               <Cpu className="w-4 h-4" />
             </a>
 
+            {/* Submissions - VTOP Academic Archive */}
             <a
-              href="#coursework-assignment"
-              onClick={(e) =>
-                scrollToSection(e, 'coursework-assignment')
-              }
+              href="#submissions"
+              onClick={(e) => scrollToSection(e, 'submissions')}
               className="flex items-center justify-between py-2 text-sm text-navy-800 border-b border-ivory-200"
             >
-              Coursework
+              Submissions
               <ChevronRight className="w-4 h-4" />
             </a>
 
