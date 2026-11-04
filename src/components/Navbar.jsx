@@ -88,7 +88,7 @@ export default function Navbar() {
   };
 
   const navLink =
-    'text-sm font-medium text-navy-700 hover:text-violetAccent-700 transition-colors duration-200 whitespace-nowrap';
+    'relative text-sm font-medium text-navy-700 hover:text-violetAccent-700 transition-colors duration-300 whitespace-nowrap after:content-[""] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-violetAccent-500 after:transition-transform after:duration-300 hover:after:scale-x-100';
 
   return (
     <header
@@ -119,9 +119,9 @@ export default function Navbar() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 closeMenu();
               }}
-              className="flex items-center gap-3 flex-shrink-0"
+              className="flex items-center gap-3 flex-shrink-0 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-navy-950 text-white flex items-center justify-center font-serif font-bold text-lg">
+              <div className="w-10 h-10 rounded-xl bg-navy-950 text-white flex items-center justify-center font-serif font-bold text-lg shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-md group-hover:bg-violetAccent-700">
                 BC
               </div>
 
@@ -130,7 +130,7 @@ export default function Navbar() {
                   Advanced Python Programming
                 </span>
 
-                <h1 className="text-lg sm:text-xl font-serif font-bold text-navy-950">
+                <h1 className="text-lg sm:text-xl font-serif font-bold text-navy-950 transition-colors duration-300 group-hover:text-violetAccent-700">
                   Beyond Code
                 </h1>
               </div>
@@ -138,6 +138,7 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-7">
+
               <a
                 href="#about"
                 onClick={(e) => scrollToSection(e, 'about')}
@@ -156,7 +157,7 @@ export default function Navbar() {
                 }
                 className={`${navLink} flex items-center gap-2 text-violetAccent-700 font-semibold`}
               >
-                <Cpu className="w-4 h-4" />
+                <Cpu className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
                 System Architecture
               </a>
 
@@ -171,12 +172,13 @@ export default function Navbar() {
                 Coursework
               </a>
 
+              {/* Evidence Button */}
               <a
                 href="#stars-photo"
                 onClick={(e) => scrollToSection(e, 'stars-photo')}
-                className="px-4 py-2.5 rounded-xl bg-navy-950 hover:bg-violetAccent-700 text-white text-xs font-semibold flex items-center gap-2 transition-colors"
+                className="px-4 py-2.5 rounded-xl bg-navy-950 hover:bg-violetAccent-700 text-white text-xs font-semibold flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-violetAccent-700/15"
               >
-                <Upload className="w-4 h-4" />
+                <Upload className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
                 Evidence
               </a>
             </nav>
@@ -185,7 +187,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-navy-800 hover:bg-ivory-200"
+              className="lg:hidden p-2 rounded-lg text-navy-800 hover:bg-[#fce7f3]/60 transition-colors duration-300"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -201,7 +203,8 @@ export default function Navbar() {
       {/* Activity Navigation */}
       <div className="hidden md:block bg-white/95 border-b border-ivory-200">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-5 xl:gap-7 overflow-x-auto py-3">
+          <div className="flex items-center justify-center gap-2 xl:gap-3 overflow-x-auto py-2.5">
+
             {activitiesList.map((item) => (
               <a
                 key={item.id}
@@ -209,14 +212,18 @@ export default function Navbar() {
                 onClick={(e) =>
                   scrollToSection(e, item.id, item.aliases || [])
                 }
-                className="flex items-center gap-1.5 text-[11px] text-navy-600 hover:text-violetAccent-700 whitespace-nowrap transition-colors"
+                className="group flex items-center gap-1.5 px-2.5 py-2 rounded-lg text-[11px] text-navy-600 whitespace-nowrap transition-colors duration-300 hover:bg-[#fdf2f8] hover:text-violetAccent-700"
               >
-                <span className="font-mono text-[9px] text-blueAccent-600">
+                <span className="font-mono text-[9px] text-blueAccent-600 transition-colors duration-300 group-hover:text-violetAccent-700">
                   {item.num}
                 </span>
-                <span>{item.name}</span>
+
+                <span className="relative after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-full after:h-px after:bg-violetAccent-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                  {item.name}
+                </span>
               </a>
             ))}
+
           </div>
         </nav>
       </div>
@@ -229,7 +236,7 @@ export default function Navbar() {
             <a
               href="#about"
               onClick={(e) => scrollToSection(e, 'about')}
-              className="flex items-center justify-between py-2 text-sm text-navy-800 border-b border-ivory-200"
+              className="flex items-center justify-between py-2 text-sm text-navy-800 border-b border-ivory-200 hover:text-violetAccent-700 transition-colors duration-300"
             >
               About Journey
               <ChevronRight className="w-4 h-4" />
@@ -253,7 +260,7 @@ export default function Navbar() {
             <a
               href="#submissions"
               onClick={(e) => scrollToSection(e, 'submissions')}
-              className="flex items-center justify-between py-2 text-sm text-navy-800 border-b border-ivory-200"
+              className="flex items-center justify-between py-2 text-sm text-navy-800 border-b border-ivory-200 hover:text-violetAccent-700 transition-colors duration-300"
             >
               Submissions
               <ChevronRight className="w-4 h-4" />
@@ -272,7 +279,7 @@ export default function Navbar() {
                     onClick={(e) =>
                       scrollToSection(e, item.id, item.aliases || [])
                     }
-                    className="p-3 rounded-lg bg-ivory-50 border border-ivory-200 text-xs text-navy-700 hover:border-violetAccent-300 hover:text-violetAccent-700"
+                    className="p-3 rounded-lg bg-ivory-50 border border-ivory-200 text-xs text-navy-700 transition-colors duration-300 hover:bg-[#fdf2f8] hover:border-violetAccent-300 hover:text-violetAccent-700"
                   >
                     <span className="block text-[9px] font-mono text-violetAccent-600 mb-1">
                       {item.num}
@@ -286,7 +293,7 @@ export default function Navbar() {
             <a
               href="#stars-photo"
               onClick={(e) => scrollToSection(e, 'stars-photo')}
-              className="flex items-center justify-center gap-2 w-full p-3 rounded-xl bg-navy-950 text-white text-sm font-medium"
+              className="flex items-center justify-center gap-2 w-full p-3 rounded-xl bg-navy-950 text-white text-sm font-medium transition-all duration-300 hover:bg-violetAccent-700 hover:shadow-md"
             >
               <Upload className="w-4 h-4" />
               View Evidence

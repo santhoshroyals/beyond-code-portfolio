@@ -10,7 +10,6 @@ import AudioBusinessThesisActivity from './AudioBusinessThesisActivity';
 import WebsitePptActivity from './WebsitePptActivity';
 import WebsiteDemoVideoActivity from './WebsiteDemoVideoActivity';
 import PadletScreenshotsActivity from './PadletScreenshotsActivity';
-import VtopSubmissions from './VtopSubmissions';
 
 export default function ActivitiesSection() {
   return (
@@ -32,11 +31,7 @@ export default function ActivitiesSection() {
           <WebsiteDemoVideoActivity />
           <PadletScreenshotsActivity />
 
-          {/* VTOP Academic Submissions */}
-          <div id="submissions" className="scroll-mt-24">
-            <VtopSubmissions />
-          </div>
-
+          
         </div>
       </div>
     </section>

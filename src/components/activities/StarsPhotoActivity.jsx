@@ -231,39 +231,42 @@ export default function StarsPhotoActivity() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <MediaUploadSlot
-            activityKey="starsPhoto"
-            fieldKey="userUploadedImage"
-            currentImage={activity.userUploadedImage}
-            defaultImage={null}
-            aspectRatio="aspect-[4/3]"
-            title="Recognition Photo 1"
-            caption="Assignments and classroom activities — 7 Stars"
-            label="Upload Photo 1"
-          />
+  {/* Recognition Photo 1 - Now displays the previous Photo 2 image */}
+  <MediaUploadSlot
+    activityKey="starsPhoto"
+    fieldKey="cat1Image"
+    currentImage={activity.cat1Image}
+    defaultImage={null}
+    aspectRatio="aspect-[4/3]"
+    title="Recognition Photo 1"
+    caption="Assignments and classroom activities — 7 Stars"
+    label="Upload Photo 1"
+  />
 
-          <MediaUploadSlot
-            activityKey="starsPhoto"
-            fieldKey="cat1Image"
-            currentImage={activity.cat1Image}
-            defaultImage={null}
-            aspectRatio="aspect-[4/3]"
-            title="Recognition Photo 2"
-            caption="Lab consistency — 1 Star"
-            label="Upload Photo 2"
-          />
+  {/* Recognition Photo 2 - Now displays the previous Photo 1 image */}
+  <MediaUploadSlot
+    activityKey="starsPhoto"
+    fieldKey="userUploadedImage"
+    currentImage={activity.userUploadedImage}
+    defaultImage={null}
+    aspectRatio="aspect-[4/3]"
+    title="Recognition Photo 2"
+    caption="Lab consistency — 1 Star"
+    label="Upload Photo 2"
+  />
 
-          <MediaUploadSlot
-            activityKey="starsPhoto"
-            fieldKey="cat2Image"
-            currentImage={activity.cat2Image}
-            defaultImage={null}
-            aspectRatio="aspect-[4/3]"
-            title="Recognition Photo 3"
-            caption="CAT-2 examination recognition — 1 Star"
-            label="Upload Photo 3"
-          />
-        </div>
+  {/* Recognition Photo 3 - Unchanged */}
+  <MediaUploadSlot
+    activityKey="starsPhoto"
+    fieldKey="cat2Image"
+    currentImage={activity.cat2Image}
+    defaultImage={null}
+    aspectRatio="aspect-[4/3]"
+    title="Recognition Photo 3"
+    caption="CAT-2 examination recognition — 1 Star"
+    label="Upload Photo 3"
+  />
+</div>
 
         <p className="text-xs text-navy-500 mt-4">
           My nine stars include seven for assignments and classroom activities,
